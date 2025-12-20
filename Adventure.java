@@ -14,23 +14,35 @@ public class Adventure {
             System.out.println("Enter your name Jomviking: ");
             heroName = input.nextLine();
 
-            System.out.println("Hello" + heroName + "I have a query for you" + );
+            System.out.println("Hello" + heroName + "I have a query for you" + "");
             String decision1 = input.nextLine();
 
-            if (decision1.equals(Yes")) {
+            if (decision1.equals("Yes")) {
                 System.out.println("You Lost! Try Again");
-                return;
+                continue;
             } else if (decision1.equals("No")) {
                 System.out.println();
                 String decision2 = input.nextLine();
 
-                if (decision2.eqals("Yes")) {
-                    System.out.println("You lost")
+                if (decision2.equals("Yes")) {
+                    System.out.println("You lost");
+                    continue;
                 } else if (decision2.equals("No")) {
                     System.out.println();
-                    String decision3 = input.nextLine();
+                    String decision3 = input.nextLine(); 
 
-                    if (decision3.equals("))
+                    if (decision3.equals("Yes")) {
+                        System.out.println("You lost!");
+                        continue;
+                    } else if (decision3.equals("No")) {
+                        System.out.println("You Win!");
+                        System.out.println("Would you like to play again?");
+                        String again = input.nextLine();
+                        if (again.equals("No")) {
+                            return;
+                        }
+
+                    }
                 }
             }
             
